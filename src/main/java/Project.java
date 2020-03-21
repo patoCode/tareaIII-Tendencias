@@ -1,3 +1,4 @@
+package main.java;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +39,8 @@ public class Project {
             map.put(matchedWord.toLowerCase(), 1);
         }
     }
-    public Scanner readFile() {
+    @SuppressWarnings("resource")
+	public Scanner readFile() {
         Scanner scanner = null;     
          try { 
         	 scanner = new Scanner(new File("text.txt")).useDelimiter(" "); 
